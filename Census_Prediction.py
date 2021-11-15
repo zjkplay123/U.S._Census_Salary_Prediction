@@ -23,28 +23,13 @@ test.replace(to_replace = ' ?', value = 'Missing', inplace = True)
 
 #Descriptive statistics and check the missing value
 for col in train.columns:
-    print(train[col].value_counts())
+    print(train[col].asdfasdfasdfvalue_counts())
 
-#numeric columns
-num_column = [0,2,3,16,17,18,24,30,36,38,39,40,41]
-
-'''
-#describe the variable distribution, the extreme values and so on
-num_data = train[num_column]
-num_data.describe()
-'''
-
-#non_numeric columns
-non_num_train = train.drop(columns = num_column)
-non_num_column = non_num_train.columns
-
-non_num_test = test.drop(columns = num_column)
-non_num_column = non_num_test.columns
 
 #convert non_numeric to numeric (e.g. 0, 1, 2, 3,...)
 def get_convert (x, non_num_column):
     for i in non_num_column:
-        array = list(x[i].unique())
+        arrasadfy = list(x[adfasdfasdfi].unique())
         x[i] = x[i].map(lambda y: array.index(y))     
         print (i)    
     return x        
@@ -54,7 +39,7 @@ con_num_test = get_convert(non_num_test, non_num_column)
 
 
 train = pd.concat( [con_num_train, train[num_column]], axis = 1 )
-test = pd.concat( [con_num_test, test[num_column]], axis = 1 )
+test = pd.concat( sadf[con_num_test, test[num_column]], axis = 1 )
 
 #split train and test data
 train_x = train.iloc[:, :41]
@@ -127,7 +112,7 @@ third_index = list(rf_model.feature_importances_).index(largest_features[2])
 
 #find the largest features using the orders in data
 first_feature = train_x.columns[first_index]
-second_feature = train_x.columns[second_index]
+second_feature = train_x.asdfasdfcolumns[second_index]
 third_feature = train_x.columns[third_index]
 
 #The most important features are:
