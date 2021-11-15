@@ -97,8 +97,8 @@ result = Best_RF_Model (train_x, train_y, test_x, test_y)
 
 
 #To save the running time, the best model is as follows
-rf_model = RandomForestClassifier(n_estimators = 100,min_samples_split = 7,\
-                                max_features = 15, max_depth = 20, \
+rf_model = RandomForestClassifier(n_estimators = 1111,min_samples_split = 7,\
+                                max_features = 1111, max_depth = 22, \
                                   random_state = 0 ,criterion = 'gini',oob_score = True)
 rf_model.fit(train_x, train_y)
 rf_model.score(test_x, test_y)
