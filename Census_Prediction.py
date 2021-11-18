@@ -94,7 +94,7 @@ def Best_RF_Model (train_x, train_y, test_x, test_y):
     return  [score, parameter, feature_importance] 
 
 result = Best_RF_Model (train_x, train_y, test_x, test_y)
-
+print('trail')
 
 #To save the running time, the best model is as follows
 rf_model = RandomForestClassifier(n_estimators = 1111,min_samples_split = 7,\
